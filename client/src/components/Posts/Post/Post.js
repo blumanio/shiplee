@@ -8,10 +8,11 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import ThumbUpAltIcon from "@material-ui/icons/ThunmUpAlt";
+import ThumbUpAltIcon from "@material-ui/icons/ThumbUpAlt";
 
-import DeleteIcon from "@material-ui/icons/Delete";
-import MoreHorizIcon from "@material-ui/MoreHoriz";
+// import DeleteIcon from "@material-ui/icons/Delete";
+import RoomIcon from '@material-ui/icons/Room'
+import More from "@material-ui/icons";
 import moment from "moment";
 const Post = ({ post }) => {
   const classes = useStyles();
@@ -30,13 +31,13 @@ const Post = ({ post }) => {
       </div>
       <div className={classes.overlay}>
         <Button style={{ color: "white" }} size="small" onClick={() => {}}>
-          <MoreHorizIcon fontSize="default" />
+          <RoomIcon fontSize="default" />
         </Button>
       </div>
       <div className={classes.details}>
-        <Typography variant="body2" color="textSecondary">
-          {post.tags.map((tag) => `#${tag} `)}
-        </Typography>
+        {/* <Typography variant="body2" color="textSecondary"> */}
+          {/* {post.tags.map((tag) => `#${tag} `)} */}
+        {/* </Typography> */}
         <CardContent>
           <Typography className={classes.title} variant="h5" gutterBottem>
             {post.message}

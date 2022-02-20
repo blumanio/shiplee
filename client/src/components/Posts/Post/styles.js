@@ -40,6 +40,7 @@ export default makeStyles({
     display: 'flex',
     justifyContent: 'space-between',
     margin: '20px',
+    flexDirection:'column',
   },
   title: {
     padding: '0 16px',
