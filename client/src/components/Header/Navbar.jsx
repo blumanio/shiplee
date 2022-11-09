@@ -14,6 +14,12 @@ const Navbar = () => {
         <div className="NavElement">
           <a href="/about">Pricing </a>
         </div>
+        <div className="NavElement">
+          <a href="/form">Form </a>
+        </div>
+        <div className="NavElement">
+          <a href="/posts">posts </a>
+        </div>
         <div className="NavElement"> Discover </div>
         <div className="NavElement"> Other</div>
         <div className="NavElement"> Login </div>
