@@ -6,7 +6,7 @@ import {
   Button,
   Select,
   MenuItem,
-} from "@material-ui/core";
+} from "@mui/material";
 import FileBase from "react-file-base64";
 import { useDispatch } from "react-redux";
 // import DateAdapter from '@material-ui/core/AdapterMoment';

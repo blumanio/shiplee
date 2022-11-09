@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+import { Container, AppBar, Typography, Grow, Grid } from "@mui/material";
 import { useDispatch } from "react-redux";
 import shipping from "./images/shipping.png";
 import Posts from "./components/Posts/Posts";
+import Navbar from "./components/Header/Navbar";
+
 import Form from "./components/Form/Form";
 import useStyles from "./styles";
 import { getPosts } from "./actions/posts";
@@ -15,6 +17,7 @@ const App = () => {
   }, [dispatch]);
   return (
     <Container maxwidth="lg">
+      <Navbar></Navbar>
       <AppBar className={classes.appBar} position="static" color="inherit">
         <Typography className={classes.heading} variant="h2" align="center">
           shipping documents easily
