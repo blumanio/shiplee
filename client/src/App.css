@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Sono:wght@300;400;500;600&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Sono', sans-serif;
+  /* background-color: #f8f8f8; */
+  background-color: #f3f3f3;
+}
+
+.container {
+  max-width: 80%;
+  margin: auto;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  text-transform: capitalize;
+}
