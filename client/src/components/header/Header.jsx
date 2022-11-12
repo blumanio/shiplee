@@ -1,5 +1,5 @@
 import React, { useState }from "react"
-import { Link } from "react-router-dom"
+import { NavLink } from "react-router-dom"
 import "./header.css"
 import shipping from "../../images/shipping.png"
 
@@ -19,15 +19,21 @@ const Header = () => {
 
           <div className="nav">
             <ul className={navlist ? "small" : "flex"}>
+              {/* <li>
+                <NavLink to='/' exact>Home</NavLink>
+              </li> */}
               <li>
-                <Link to='/'>Home</Link>
+                <NavLink to='/about'>Order</NavLink>
               </li>
               <li>
-                <Link to='/about'>About</Link>
+                <NavLink to='/contact'>Travel</NavLink>
+              </li>
+              {/* <li>
+                <NavLink to='/about'>About</NavLink>
               </li>
               <li>
-                <Link to='/contact'>Contact</Link>
-              </li>
+                <NavLink to='/contact'>Contact</NavLink>
+              </li> */}
             </ul>
           </div>
 

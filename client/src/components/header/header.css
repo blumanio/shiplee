@@ -1,21 +1,38 @@
 header {
   background-color: #fff;
-  height: 10vh;
+  height: 8vh;
   box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
-  padding: 1rem 0;
+  padding: .8rem 0;
   position: sticky;
   top: 0;
   z-index: 999;
 }
 
 header img {
-  width: 3.6rem;
+  width: 3rem;
 }
 
-header a {
-  margin-left: 2rem;
+header .nav a {
+  position: relative;
+  margin-left: 1.5rem;
   transition: .5s;
   font-weight: 500;
+  padding: 1.7rem 2rem;
+}
+
+header .nav a::after {
+  content: "";
+  position: absolute;
+  background-color: #27ae60;
+  height: 3px;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  transition: .3s;
+}
+
+header .nav a:hover::after {
+  width: 100%;
 }
 
 header a:hover {
@@ -50,14 +67,15 @@ header .toggle {
 
   header .small {
     position: absolute;
-    top: 10vh;
+    top: 8vh;
     left: 0;
     width: 100%;
     background-color: #27ae60;
     padding: 1rem;
   }
-
+  
   header li a {
+    margin: 0;
     display: inline-block;
     margin-bottom: 1rem;
     color: #fff;
