@@ -14,10 +14,10 @@ header img {
 
 header .nav a {
   position: relative;
-  margin-left: 1.5rem;
+  /* margin-left: 1rem; */
   transition: .5s;
   font-weight: 500;
-  padding: 1.7rem 2rem;
+  padding: 1.8rem 2rem;
 }
 
 header .nav a::after {
