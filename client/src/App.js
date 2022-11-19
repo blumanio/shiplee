@@ -1,31 +1,49 @@
-import "./App.css"
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from "react-router-dom";
-import Header from './components/header/Header';
-import Home from "./components/home/Home"
-import Order from "./components/order/Order"
-import Travel from "./components/travel/Travel"
-// import About from "./components/about/About"
-// import Contact from "./components/contact/Contact"
+import React, { useEffect } from "react";
+import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+import { useDispatch } from "react-redux";
+import shipping from "./images/shipping.png";
+import Posts from "./components/Posts/Posts";
+import Form from "./components/Form/Form";
+import useStyles from "./styles";
+import { getPosts } from "./actions/posts";
 
-function App() {
+const App = () => {
+  const classes = useStyles();
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
   return (
-    <>
-    <Router>
-        <Header />
-        <Switch>
-          <Route exact path='/' component={Home} />
-          <Route exact path='/order' component={Order} />
-          <Route exact path='/travel' component={Travel} />
-          {/* <Route exact path='/about' component={About} />
-          <Route exact path='/contact' component={Contact} /> */}
-        </Switch>
-      </Router>
-    </>
+    <Container maxwidth="lg">
+      <AppBar className={classes.appBar} position="static" color="inherit">
+        <Typography className={classes.heading} variant="h2" align="center">
+          shipping documents easily
+        </Typography>
+        <img
+          className={classes.image}
+          src={shipping}
+          alt="memories"
+          height={60}
+        />
+      </AppBar>
+      <Grow in>
+        <Container>
+          <Grid
+            container
+            justifyContent="space-between"
+            alignItems="stretch"
+            spacing={3}
+          >
+            <Grid item xs={12} sm={7}>
+              <Posts />
+            </Grid>
+            <Grid item xs={12} sm={4}>
+              <Form />
+            </Grid>
+          </Grid>
+        </Container>
+      </Grow>
+    </Container>
   );
-}
-
+};
 export default App;
