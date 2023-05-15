@@ -1,9 +1,15 @@
 import React, { useEffect } from "react";
-import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
+import { Container, AppBar, Typography, Grow, Grid } from "@mui/material";
 import { useDispatch } from "react-redux";
-import shipping from "./images/shipping.png";
 import Posts from "./components/Posts/Posts";
+import Navbar from "./components/Header/Navbar";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import About from "./components/About/About";
 import Form from "./components/Form/Form";
+import Home from "./components/Home/Home";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
+
 import useStyles from "./styles";
 import { getPosts } from "./actions/posts";
 
@@ -14,36 +20,38 @@ const App = () => {
     dispatch(getPosts());
   }, [dispatch]);
   return (
-    <Container maxwidth="lg">
-      <AppBar className={classes.appBar} position="static" color="inherit">
-        <Typography className={classes.heading} variant="h2" align="center">
-          shipping documents easily
-        </Typography>
-        <img
-          className={classes.image}
-          src={shipping}
-          alt="memories"
-          height={60}
-        />
-      </AppBar>
-      <Grow in>
-        <Container>
-          <Grid
-            container
-            justifyContent="space-between"
-            alignItems="stretch"
-            spacing={3}
-          >
-            <Grid item xs={12} sm={7}>
-              <Posts />
+    <>
+      <Navbar></Navbar>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/about" element={<About />}></Route>
+          <Route path="/posts" element={<Posts />}></Route>
+          <Route path="/form" element={<Form />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
+          <Route path="/" element={<Home />}></Route>
+        </Routes>
+      </BrowserRouter>
+      <Container maxwidth="lg">
+        <Grow in>
+          <Container>
+            <Grid
+              container
+              justifyContent="space-between"
+              alignItems="stretch"
+              spacing={3}
+            >
+              <Grid item xs={12} sm={7}>
+                {/* <Posts /> */}
+              </Grid>
+              {/* <Grid item xs={12} sm={4}> */}
+              {/* <Form /> */}
+              {/* </Grid> */}
             </Grid>
-            <Grid item xs={12} sm={4}>
-              <Form />
-            </Grid>
-          </Grid>
-        </Container>
-      </Grow>
-    </Container>
+          </Container>
+        </Grow>
+      </Container>
+    </>
   );
 };
 export default App;
