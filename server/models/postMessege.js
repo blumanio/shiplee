@@ -5,15 +5,18 @@ const postSchema = mongoose.Schema({
   country: String,
   city: String,
   selectedFile: String,
-  shipType:String,
+  shipType: String,
   likeCount: {
     type: Number,
     default: 0,
   },
+  sendDate: Date,
   createdAt: {
     type: Date,
     default: new Date(),
   },
+  num1: Number,
+  num2: Number,
 });
 
 const PostMessage = mongoose.model("PostMessage", postSchema);

@@ -7,6 +7,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./components/About/About";
 import Form from "./components/Form/Form";
 import Home from "./components/Home/Home";
+import Login from "./components/login/Login";
+import Register from "./components/register/Register";
 
 import useStyles from "./styles";
 import { getPosts } from "./actions/posts";
@@ -25,6 +27,8 @@ const App = () => {
           <Route path="/about" element={<About />}></Route>
           <Route path="/posts" element={<Posts />}></Route>
           <Route path="/form" element={<Form />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+          <Route path="/register" element={<Register />}></Route>
           <Route path="/" element={<Home />}></Route>
         </Routes>
       </BrowserRouter>

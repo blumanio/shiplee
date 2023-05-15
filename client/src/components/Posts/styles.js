@@ -11,4 +11,8 @@ export default makeStyles((theme) => ({
   actionDiv: {
     textAlign: "center",
   },
+  container1: {
+    width: "70% !important",
+    margin: "2rem auto",
+  },
 }));

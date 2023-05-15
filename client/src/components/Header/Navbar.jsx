@@ -20,9 +20,15 @@ const Navbar = () => {
         <div className="NavElement">
           <a href="/posts">posts </a>
         </div>
-        <div className="NavElement"> Discover </div>
-        <div className="NavElement"> Other</div>
-        <div className="NavElement"> Login </div>
+        <div className="NavElement">
+          {" "}
+          <a href="/register">Register </a>{" "}
+        </div>
+        {/* <div className="NavElement"> <a href="/Register">Register </a></div> */}
+        <div className="NavElement">
+          {" "}
+          <a href="/login">Login </a>{" "}
+        </div>
       </div>
     </div>
   );

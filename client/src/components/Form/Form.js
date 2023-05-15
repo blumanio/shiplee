@@ -26,6 +26,7 @@ const Form = () => {
     city: "",
     shipType: "",
     selectedFile: "",
+    sendDate: "",
   });
   console.log("postData", postData);
   const classes = useStyles();
@@ -78,6 +79,26 @@ const Form = () => {
               }
             />
             <TextField
+              name="num1"
+              variant="outlined"
+              label="num1"
+              fullWidth
+              value={postData.num1}
+              onChange={(e) =>
+                setPostData({ ...postData, num1: e.target.value })
+              }
+            />
+            <TextField
+              name="num2"
+              variant="outlined"
+              label="num2"
+              fullWidth
+              value={postData.num2}
+              onChange={(e) =>
+                setPostData({ ...postData, num2: e.target.value })
+              }
+            />
+            <TextField
               name="City"
               variant="outlined"
               label="City"
@@ -91,9 +112,9 @@ const Form = () => {
               variant="outlined"
               label="date"
               fullWidth
-              selected={selectedData}
+              selected={postData.sendDate}
               onChange={(date) => {
-                setSelectedData(date);
+                setPostData({ ...postData, sendDate: date });
               }}
             />
             <Select
