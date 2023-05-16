@@ -1,0 +1,28 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon --experimental-modules --es-module-specifier-resolution=node server/index.js",
+    "build": "cd client && npm run build",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "server": "nodemon server/index.js",
+    "develop": "concurrently --kill-others-on-fail \"npm run index\" \"npm run start --prefix client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.17.1",
+    "mongoose": "^6.1.2",
+    "nodemon": "^2.0.15",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  }
+}
