@@ -4,9 +4,9 @@ import { useDispatch } from "react-redux";
 import Posts from "./components/Posts/Posts";
 import Navbar from "./components/Header/Navbar";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import About from "./components/About/About";
+//import About from "./components/About/About";
 import Form from "./components/Form/Form";
-import Home from "./components/Home/Home";
+//import Home from "./components/Home/Home";
 import Login from "./components/login/Login";
 import Register from "./components/register/Register";
 
@@ -24,7 +24,6 @@ const App = () => {
       <Navbar></Navbar>
       <BrowserRouter>
         <Routes>
-          <Route path="/about" element={<About />}></Route>
           <Route path="/posts" element={<Posts />}></Route>
           <Route path="/form" element={<Form />}></Route>
           <Route path="/login" element={<Login />}></Route>
