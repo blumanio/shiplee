@@ -15,7 +15,7 @@ import { useDispatch } from "react-redux";
 import { createPost } from "../../actions/posts";
 import useStyles from "./styles";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist//react-datepicker.css";
+// import "react-datepicker/dist/react-datepicker.css";
 
 const Form = () => {
   const [selectedData, setSelectedData] = useState(null);
