@@ -28,7 +28,7 @@ const App = () => {
           <Route path="/form" element={<Form />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/register" element={<Register />}></Route>
-          <Route path="/" element={<Home />}></Route>
+          {/*<Route path="/" element={<Home />}></Route>*/}
         </Routes>
       </BrowserRouter>
       <Container maxwidth="lg">

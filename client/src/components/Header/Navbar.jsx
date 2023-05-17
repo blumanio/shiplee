@@ -1,4 +1,4 @@
-import "./Navbar.css";
+//import "./Navbar.css";
 import shipping from "../../images/shipping.png";
 
 const Navbar = () => {
