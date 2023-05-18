@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "nodemon --experimental-modules --es-module-specifier-resolution=node index.js",
-    "build": "cd client && npm run build",
+    "build": "npm run build",
     "install-client": "cd client && npm install",
     "server": "nodemon index.js",
     "develop": "concurrently --kill-others-on-fail \"npm run index\" \"npm run start --prefix client\""
